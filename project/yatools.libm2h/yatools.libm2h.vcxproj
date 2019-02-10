@@ -23,7 +23,7 @@
     <ClCompile Include="..\..\source\mlt2html\convert.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\source\libm2h\m2h.h" />
+    <ClInclude Include="..\..\include\m2h.h" />
     <ClInclude Include="..\..\source\mlt2html\convert.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
