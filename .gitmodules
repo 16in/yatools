@@ -1,0 +1,3 @@
+[submodule "yatools.lib"]
+	path = yatools.lib
+	url = https://github.com/16in/yatools.lib.git
