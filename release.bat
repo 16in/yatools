@@ -3,6 +3,7 @@
 @mkdir release
 @xcopy document\aafile release\aafile\ /S /Q /Y
 @xcopy document\MLT2HTML release\MLT2HTML\ /S /Q /Y
+@xcopy document\MLT2PNG release\MLT2PNG\ /S /Q /Y
 
 @rem ------------------------------------------------
 @rem   AAFileAccesser
@@ -31,5 +32,12 @@
 @copy .\bin\Release\x86\MLT2HTML.exe .\release\MLT2HTML\MLT2HTML.exe
 @copy .\bin\Release\x64\MLT2HTML.exe .\release\MLT2HTML\MLT2HTML.x64.exe
 
+
+@rem ------------------------------------------------
+@rem   MLT2PNG
+@rem ------------------------------------------------
+@rem mlt2html
+@copy .\bin\Release\x86\MLT2PNG.exe .\release\MLT2PNG\MLT2PNG.exe
+@copy .\bin\Release\x64\MLT2PNG.exe .\release\MLT2PNG\MLT2PNG.x64.exe
 
 @call .\cleanup.bat
