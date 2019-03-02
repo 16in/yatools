@@ -22,6 +22,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yatools.lib.image.file", "y
 		{8173F4A9-0435-4B24-997B-49EBFD66530F} = {8173F4A9-0435-4B24-997B-49EBFD66530F}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yatools.mlt2png", "project\yatools.mlt2png\yatools.mlt2png.vcxproj", "{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE25AD10-7D76-4F18-BC77-19C857B74E27} = {EE25AD10-7D76-4F18-BC77-19C857B74E27}
+		{8173F4A9-0435-4B24-997B-49EBFD66530F} = {8173F4A9-0435-4B24-997B-49EBFD66530F}
+		{6F6ADBB8-95E2-4CBE-9815-BF5F28574143} = {6F6ADBB8-95E2-4CBE-9815-BF5F28574143}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Library|x64 = Debug Library|x64
@@ -114,6 +121,22 @@ Global
 		{EE25AD10-7D76-4F18-BC77-19C857B74E27}.Release|x64.Build.0 = Release|x64
 		{EE25AD10-7D76-4F18-BC77-19C857B74E27}.Release|x86.ActiveCfg = Release|Win32
 		{EE25AD10-7D76-4F18-BC77-19C857B74E27}.Release|x86.Build.0 = Release|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug Library|x64.ActiveCfg = Debug|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug Library|x64.Build.0 = Debug|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug Library|x86.ActiveCfg = Debug|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug Library|x86.Build.0 = Debug|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug|x64.ActiveCfg = Debug|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug|x64.Build.0 = Debug|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug|x86.ActiveCfg = Debug|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Debug|x86.Build.0 = Debug|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release Library|x64.ActiveCfg = Release|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release Library|x64.Build.0 = Release|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release Library|x86.ActiveCfg = Release|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release Library|x86.Build.0 = Release|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release|x64.ActiveCfg = Release|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release|x64.Build.0 = Release|x64
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release|x86.ActiveCfg = Release|Win32
+		{50884BC4-DF7B-48B4-86CB-18844AF2B2E4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
