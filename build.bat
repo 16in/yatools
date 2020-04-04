@@ -4,5 +4,3 @@
 
 MSBuild.exe Yatools.net.sln /p:Configuration=Release
 MSBuild.exe Yatools.net.sln /p:Configuration=Release
-
-pause
