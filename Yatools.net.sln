@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yaimage", "Yaimage\Yaimage.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mlt2Image", "Mlt2Image\Mlt2Image.csproj", "{27774A86-BFA2-4FB1-958A-F8FFB5DE46AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mlt2Html", "Mlt2Html\Mlt2Html.csproj", "{048E351C-447A-4884-BD3C-3AAA9672F968}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{27774A86-BFA2-4FB1-958A-F8FFB5DE46AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27774A86-BFA2-4FB1-958A-F8FFB5DE46AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27774A86-BFA2-4FB1-958A-F8FFB5DE46AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048E351C-447A-4884-BD3C-3AAA9672F968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048E351C-447A-4884-BD3C-3AAA9672F968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048E351C-447A-4884-BD3C-3AAA9672F968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048E351C-447A-4884-BD3C-3AAA9672F968}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

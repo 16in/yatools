@@ -42,7 +42,7 @@ namespace Mlt2Image
         // 公開フィールド
         //-----------------------------
         /// <summary>入力ファイル一覧</summary>
-        [ XmlIgnore]
+        [XmlIgnore]
         public List<string> InputPaths = new List<string>( );
 
         /// <summary>出力先ディレクトリ</summary>
