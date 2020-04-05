@@ -31,7 +31,7 @@ namespace Mlt2Image
                 option = new Option( );
                 option.Save( optionPath );
             }
-            bool isHelp = option.Parse( args );
+            bool isHelp = !option.Parse( args );
             if( isHelp || option.InputPaths.Count <= 0 )
             {
                 PrintHelp( );
