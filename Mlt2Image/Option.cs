@@ -72,6 +72,10 @@ namespace Mlt2Image
         [XmlElement( "FontSize" )]
         public float FontSize = 12.0f;
 
+        /// <summary>サブディレクトリ生成フラグ</summary>
+        [XmlElement( "IsCreateSubDiretory" )]
+        public bool IsCreateSubDiretory = true;
+
 
         //-----------------------------
         // 静的関数

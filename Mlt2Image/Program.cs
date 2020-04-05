@@ -49,7 +49,15 @@ namespace Mlt2Image
                 try
                 {
                     /* 出力先生成 */
-                    string output = Path.Combine( outputRoot == null ? Path.GetDirectoryName( path ) : outputRoot, Path.GetFileNameWithoutExtension( path ) );
+                    string output = string.Empty;
+                    if( option.IsCreateSubDiretory )
+                    {
+                        output = Path.Combine( outputRoot == null ? Path.GetDirectoryName( path ) : outputRoot, Path.GetFileNameWithoutExtension( path ) );
+                    }
+                    else
+                    {
+                        output = outputRoot == null ? Path.GetDirectoryName( path ) : outputRoot;
+                    }
                     if( !Directory.Exists( output ) )
                     {
                         Directory.CreateDirectory( output );
