@@ -31,6 +31,12 @@ namespace Mlt2Image
                 option = new Option( );
                 option.Save( optionPath );
             }
+            bool isHelp = option.Parse( args );
+            if( isHelp || option.InputPaths.Count <= 0 )
+            {
+                PrintHelp( );
+                return;
+            }
 
 
             /*---- フォント生成 ----*/
@@ -43,7 +49,7 @@ namespace Mlt2Image
 
             /*---- ファイルをすべて表示 ----*/
             string outputRoot = option.OutputDirectory;
-            string[ ] paths = args;
+            string[ ] paths = option.InputPaths.ToArray( );
             foreach( var path in paths )
             {
                 try
@@ -79,6 +85,22 @@ namespace Mlt2Image
                 {
                     System.Console.Error.WriteLine( "出力に失敗しました。\n[{0}]", path );
                 }
+            }
+        }
+
+        /// <summary>
+        /// ヘルプ表示
+        /// </summary>
+        /// <remarks>
+        /// ヘルプを表示します。
+        /// </remarks>
+        public static void PrintHelp( )
+        {
+            var helpPath = Path.Combine( System.AppDomain.CurrentDomain.BaseDirectory, "help.txt" );
+            if( File.Exists( helpPath ) )
+            {
+                var help = File.ReadAllText( helpPath, System.Text.Encoding.UTF8 );
+                System.Console.Error.WriteLine( help );
             }
         }
 

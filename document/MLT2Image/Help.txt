@@ -1,0 +1,86 @@
+﻿----------------------------------------
+
+　　　MLT2Image オプション設定
+
+----------------------------------------
+●概要
+MLT2ImageはXML形式でオプションを指定します。
+オプションの設定ファイルはmlt2image.config.xmlです。
+
+またコマンドラインオプションを設定することで
+mlt2image.config.xmlの設定内容を一時的に上書きすることができます。
+
+
+●XML構成
+・Mlt2Imageタグ
+　MLT2Image設定XMLのルートタグです
+
+・OutputFormatタグ
+　画像を出力するフォーマットを指定します。
+　指定できるフォーマットはpng、jpg、jpeg、bmp、gif、tiffです。
+
+・BackGroundColorタグ
+　背景色を指定するタグです。
+　#AARRGGBB形式、#RRGGBB形式で指定することができます。
+
+・TextColorタグ
+　文字色を指定するタグです。
+　#AARRGGBB形式、#RRGGBB形式で指定することができます。
+　ただし#AARRGGBB形式でのアルファ値は無視されます。
+
+・FontNameタグ
+　フォント名を指定します。
+　存在しないフォント名を指定するとシステムのデフォルトフォントが指定されます。
+
+・FontSizeタグ
+　フォントのポイント数を指定します。
+
+・OutputDirectoryタグ
+　出力先のディレクトリパスを指定します。
+　存在しない、または空文字列を指定した場合は、mltファイルと同じディレクトリとなります。
+
+・IsCreateSubDiretoryタグ
+　出力時にmltファイルと同じ名前のサブディレクトリを生成するか指定します。
+　trueを指定すると生成、falseを指定すると非生成となります。
+　存在しない場合はtrueが指定されたものとみなされます。
+
+
+●コマンドラインオプション
+・コマンドライン
+MLT2Image [-o|--output 出力先ディレクトリパス]
+          [-f|--format 出力フォーマット]
+          [-b|--bgcolor 背景色]
+          [-t|--textcolor 文字色]
+          [-s|--subdirectory]
+          [-ds|--disable-subdirectoy]
+          [-fn|--font-name フォント名]
+          [-fs|--font-size フォントサイズ]
+          [-h|--help]
+
+・各オプション
+[-o|--output]
+  OutputDirectoryタグの設定を上書きします。
+
+[-f|--format]
+  OutputFormatタグの設定を上書きします。
+
+[-b|--bgcolor]
+　BackGroundColorタグの設定を上書きします。
+
+[-t|--textcolor]
+　TextColorタグの設定を上書きします。
+
+[-s|--subdirectory]
+　IsCreateSubDiretoryタグにtrueを設定します。
+
+[-ds|--disable-subdirectoy]
+　IsCreateSubDiretoryタグにfalseを設定します。
+
+[-fn|--font-name]
+　FontNameタグを上書きします。
+
+[-fs|--font-size]
+　FontSizeタグを上書きします。
+
+[-h|--help]
+　ヘルプを表示します。

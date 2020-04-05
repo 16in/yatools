@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更します。
-[assembly: AssemblyTitle( "Mlt2Image" )]
+[assembly: AssemblyTitle( "MLT2Image" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "" )]
-[assembly: AssemblyProduct( "Mlt2Image" )]
-[assembly: AssemblyCopyright( "Copyright ©_16in  2020" )]
+[assembly: AssemblyCompany( "YATools" )]
+[assembly: AssemblyProduct( "MLT2Image" )]
+[assembly: AssemblyCopyright( "Copyright ©_16in/◆7N5y1wtOn2  2020" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 

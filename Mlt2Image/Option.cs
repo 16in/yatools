@@ -142,47 +142,47 @@ namespace Mlt2Image
             // カラー変換
             try
             {
-                this.BackGroundColor = ColorTranslator.FromHtml( this.BackGroundColorText );
+                BackGroundColor = ColorTranslator.FromHtml( BackGroundColorText );
             }
             catch( Exception )
             {
-                this.BackGroundColor = Color.White;
+                BackGroundColor = Color.White;
             }
             try
             {
-                this.TextColor = ColorTranslator.FromHtml( this.TextColorText );
+                TextColor = ColorTranslator.FromHtml( TextColorText );
             }
             catch( Exception )
             {
-                this.BackGroundColor = Color.Black;
+                BackGroundColor = Color.Black;
             }
 
             // フォーマット
-            var format = this.OutputFormat == null ? "png" : this.OutputFormat.Trim( ).ToLower( );
+            var format = OutputFormat == null ? "png" : OutputFormat.Trim( ).ToLower( );
             if( format.Equals( "png" ) )
             {
-                this.Format = ImageFormat.Png;
-                this.Extension = "png";
+                Format = ImageFormat.Png;
+                Extension = "png";
             }
             else if( format.Equals( "jpeg" ) || format.Equals( "jpg" ) )
             {
-                this.Format = ImageFormat.Jpeg;
-                this.Extension = "jpg";
+                Format = ImageFormat.Jpeg;
+                Extension = "jpg";
             }
             else if( format.Equals( "bmp" ) )
             {
-                this.Format = ImageFormat.Bmp;
-                this.Extension = "bmp";
+                Format = ImageFormat.Bmp;
+                Extension = "bmp";
             }
             else if( format.Equals( "gif" ) )
             {
-                this.Format = ImageFormat.Gif;
-                this.Extension = "gif";
+                Format = ImageFormat.Gif;
+                Extension = "gif";
             }
             else if( format.Equals( "tiff" ) )
             {
-                this.Format = ImageFormat.Tiff;
-                this.Extension = "tiff";
+                Format = ImageFormat.Tiff;
+                Extension = "tiff";
             }
         }
 
@@ -200,6 +200,55 @@ namespace Mlt2Image
             {
                 serializer.Serialize( stream, this );
             }
+        }
+
+        /// <summary>
+        /// パース
+        /// </summary>
+        /// <param name="options">オプションリスト</param>
+        /// <returns>ヘルプ表示を行う場合はfalse、それ以外はtrue</returns>
+        /// <remarks>
+        /// オプション一覧をパースします。
+        /// </remarks>
+        public bool Parse( string[] options )
+        {
+            bool isHelp = false;
+            try
+            {
+                for( int i = 0; i < options.Length; i++ )
+                {
+                    var op = options[ i ];
+                    if( !string.IsNullOrWhiteSpace( op ) )
+                    {
+                        if( op[ 0 ] != '-' )
+                        {
+                            InputPaths.Add( op );
+                        }
+                        else
+                        {
+                            op = op.ToLower( );
+                            switch( op )
+                            {
+                            case "-o": case "--output": OutputDirectory = options[ ++i ]; break;
+                            case "-f": case "--format": OutputFormat = options[ ++i ]; break;
+                            case "-b": case "--bgcolor": BackGroundColorText = options[ ++i ]; break;
+                            case "-t": case "--textcolor": TextColorText = options[ ++i ]; break;
+                            case "-s": case "--subdirectoy": IsCreateSubDiretory = true; break;
+                            case "-ds": case "--disable-subdirectoy": IsCreateSubDiretory = false; break;
+                            case "-fn": case "--font-name": FontName = options[ ++i ]; break;
+                            case "-fs": case "--font-size": FontSize = float.Parse( options[ ++i ] ); break;
+                            case "-h": case "--help": isHelp = true; break;
+                            }
+                        }
+                    }
+                }
+                Setup( );
+            }
+            catch( Exception )
+            {
+                isHelp = true;
+            }
+            return !isHelp;
         }
 
     }

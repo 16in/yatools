@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Mlt2Image xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 画像フォーマット -->
+  <!-- 対応しているフォーマットはpng,jpg,gif,bmp,tiff -->
+  <OutputFormat>png</OutputFormat>
+
+  <!-- 背景色：HTMLで指定する形と同じです -->
+  <BackGroundColor>#ffffff</BackGroundColor>
+
+  <!-- 文字色：HTMLで指定する形と同じです -->
+  <TextColor>#000000</TextColor>
+
+  <!-- フォント設定 -->
+  <FontName>ＭＳ Ｐゴシック</FontName>
+  <FontSize>12</FontSize>
+
+  <!-- 出力先ディレクトリ -->
+  <!--
+    出力先のルートディレクトリを指定します。
+    ここで指定したディレクトリの中にファイル名のディレクトリが生成されます。
+  -->
+  <OutputDirectory></OutputDirectory>
+
+  <!-- ファイル名のサブディレクトリを作成するか -->
+  <!--
+    サブディレクトリを生成するならtrueを。
+    生成しない場合はfalseを指定します。
+  -->
+  <IsCreateSubDiretory>true</IsCreateSubDiretory>
+</Mlt2Image>
