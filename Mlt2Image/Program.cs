@@ -1,6 +1,7 @@
 ﻿using Yatool;
 using System.IO;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Mlt2Image
 {
@@ -22,6 +23,27 @@ namespace Mlt2Image
         /// プログラムのエントリポイントです。
         /// </remarks>
         public static void Main( string[ ] args )
+        {
+            try
+            {
+                EntryPoint( args );
+            }
+            catch( System.Exception e )
+            {
+                new ThreadExceptionDialog( e ).ShowDialog( );
+                var path = Path.Combine( System.AppDomain.CurrentDomain.BaseDirectory, "error.txt" );
+                File.WriteAllText( path, e.ToString( ) );
+            }
+        }
+
+        /// <summary>
+        /// エントリポイント
+        /// </summary>
+        /// <param name="args">コマンドライン引数</param>
+        /// <remarks>
+        /// プログラムのエントリポイントです。
+        /// </remarks>
+        public static void EntryPoint( string[ ] args )
         {
             /*---- オプション生成 ----*/
             string optionPath = Path.Combine( System.AppDomain.CurrentDomain.BaseDirectory, "mlt2image.config.xml" );
@@ -81,9 +103,12 @@ namespace Mlt2Image
                         bmp.Save( outPath, option.Format );
                     }
                 }
-                catch( System.Exception )
+                catch( System.Exception e )
                 {
                     System.Console.Error.WriteLine( "出力に失敗しました。\n[{0}]", path );
+
+                    new ThreadExceptionDialog( e ).ShowDialog( );
+                    File.WriteAllText( Path.Combine( System.AppDomain.CurrentDomain.BaseDirectory, "error.txt" ), e.ToString( ) );
                 }
             }
         }
